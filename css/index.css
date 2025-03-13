@@ -1252,3 +1252,58 @@ pre[class*="language-"] {
     width: auto;
     height: 40px;
 }
+pre.front-matter {
+    display: none !important;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.avatar {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .socials {
+    filter: invert(1);
+}
+
+.dark-mode .button {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode a, 
+.dark-mode li,
+.dark-mode span {
+    color: #ffffff;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
