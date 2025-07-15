@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt_BR" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diego Moreira</title>
+    <link rel="stylesheet" href="css/css-v2.css">
+
+    <style>
+        :root {
+            --background-color: #ffffff
+        }
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast was taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+
+    <link rel="canonical" href="https://diegobm23.com.br">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="diego moreira" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="curriculum and portfolio" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="author" content="diego moreira, diegobm23@gmail.com">
+    <meta name="copyright" content="diego moreira">
+    <meta name="description" content="curriculum and portfolio">
+    <meta name="keywords"
+        content="diego moreira, diegobm23, diego, moreira, backend developer, backend, developer, java, mongodb">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Diego Moreira",
+        "url": "https://diegobm23.com.br",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://diegobm23.com.br/img/terminal-solid.svg",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "url": "https://diegobm23.com.br",
+    "name": "Diego Moreira",
+    "mainEntityOfPage": "https://diegobm23.com.br"
+}
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="Diego Moreira" href="">
+    <style id="gh-members-styles">
+        .gh-post-upgrade-cta-content,
+        .gh-post-upgrade-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .gh-post-upgrade-cta-content {
+            border-radius: 8px;
+            padding: 40px 4vw;
+        }
+
+        .gh-post-upgrade-cta h2 {
+            color: #ffffff;
+            font-size: 28px;
+            letter-spacing: -0.2px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta p {
+            margin: 20px 0 0;
+            padding: 0;
+        }
+
+        .gh-post-upgrade-cta small {
+            font-size: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        .gh-post-upgrade-cta a {
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn {
+            display: block;
+            background: #ffffff;
+            text-decoration: none;
+            margin: 28px 0 0;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .gh-post-upgrade-cta a.gh-btn:hover {
+            opacity: 0.92;
+        }
+    </style>
+
+
+    <style>
+        .gh-copyright {
+            display: none;
+        }
+    </style>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hcb0trg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+        integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.typekit.net/hcb0trg.css">
+
+    <style>
+        @media (min-width: 600px) {
+            .gh-home-page {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--gap);
+                align-items: flex-start;
+            }
+
+            .gh-home-page .gh-content {
+                --content-spacing-multiplier: 1;
+            }
+
+            .gh-home-page .gh-article-image {
+                border-radius: 0px;
+                display: block;
+                overflow: hidden;
+            }
+
+            .gh-home-page .gh-content.gh-canvas>* {
+                grid-column: 1 / span 12;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .gh-home-page .gh-content.gh-canvas>* {
+                grid-column: 1 / span 10 !important;
+            }
+
+            img[srcset*="/content/images/2024/08/NEWWWW.jpg"] {
+                max-width: 60%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            .gh-content {
+                font-size: 20px;
+            }
+        }
+
+        .gh-head-actions {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .author-profile {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        body {
+
+            .gh-site-header .gh-head-navigation a,
+            /* Navigation links */
+            .gh-site-header .gh-social-links a,
+            /* Social media links */
+            .gh-article-title,
+            /* Post titles */
+            .gh-content p,
+            /* Content paragraphs */
+            .gh-author-name,
+            /* Author name */
+            .gh-author-bio {
+                /* Author bio */
+                font-family: "proxima-nova" !important;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                /* Add this line */
+                font-size: 14px;
+                /* Added font size */
+                line-height: 22.4px;
+                /* Added line height */
+                margin-block-end: 22.4px;
+                /* Added margin-block-end */
+                margin-block-start: 0px;
+                /* Added margin-block-start */
+            }
+        }
+
+
+        .kg-gallery-container {
+            /* Styles for image galleries */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .kg-gallery-image {
+            width: 300px;
+            /* Adjust as needed */
+            height: auto;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .kg-gallery-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <style>
+        .contact-social-links {
+            list-style: none;
+            padding: 0 !important;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .contact-social-links li {
+            margin-top: 0 !important;
+            margin-right: 1em;
+        }
+
+        .contact-social-links a {
+            font-size: 0 !important;
+        }
+
+        .contact-social-links a::before {
+            font-family: "Font Awesome 6 Brands";
+            display: inline-block;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .contact-social-links .link-github a::before {
+            content: "\f09b"
+        }
+
+        .contact-social-links .link-instagram a::before {
+            content: "\f16d"
+        }
+
+        .contact-social-links .link-linkedin a::before {
+            content: "\f08c"
+        }
+
+        .contact-social-links .link-threads a::before {
+            content: "\e618"
+        }
+
+        .contact-social-links .link-youtube a::before {
+            content: "\f167"
+        }
+
+        .contact-social-links .link-mail a::before {
+            content: "\40"
+        }
+
+
+        .site-tagline {
+            font-family: "proxima-nova", sans-serif;
+            letter-spacing: 6px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: grey;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .gh-head-brand-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+
+        @import url('https://fonts.cdnfonts.com/css/futura-std-4?styles=52567,52576,52579,52565');
+
+        .gh-head-logo {
+            font-family: 'futura-pt', sans-serif;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 3.4rem;
+            font-weight: 700;
+        }
+
+        .gh-head-menu {
+            font-family: 'futura-pt', sans-serif;
+            font-weight: 500;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'futura-pt', sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        .gh-article-title {
+            font-size: 3rem !important;
+        }
+
+        .gh-head-members {
+            display: none;
+        }
+
+        .gh-head-actions {
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: row wrap;
+            gap: 0;
+        }
+
+        nav.custom-menu {
+            font-family: "futura-pt", sans-serif;
+        }
+
+        nav.custom-menu>ul {
+            text-align: left;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .gh-head {
+            margin-top: 10px;
+        }
+
+        .shopify-buy-frame--product.shopify-buy__layout-horizontal {
+            display: block;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            grid-column: auto / span 4;
+            align-self: start;
+            margin-top: 0 !important;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 967px) {
+            .shopify-buy-frame--product.shopify-buy__layout-horizontal {
+                grid-column: auto / span 6;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .shopify-buy-frame--product.shopify-buy__layout-horizontal {
+                grid-column: auto / span 12;
+            }
+
+            nav.custom-menu>ul {
+                font-size: 2.4rem;
+                font-weight: 500;
+            }
+
+            nav.custom-menu ul.dropdown {
+                font-size: 2rem;
+                font-weight: 400;
+                padding-left: 20px;
+                list-style: square;
+            }
+
+            nav.custom-menu li {
+                margin-bottom: 10px;
+            }
+
+            .is-head-open #gh-head .gh-head-actions {
+                align-items: flex-start;
+                margin-left: 0;
+            }
+
+            .is-head-open #gh-head .gh-head-actions .contact-social-links {
+                margin-left: 0;
+            }
+
+            .gh-burger {
+                z-index: 9999;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            nav.custom-menu {
+                margin-left: auto;
+                display: flex;
+                flex-flow: row wrap;
+                min-width: 360px;
+            }
+
+            nav.custom-menu a {
+                text-decoration: none;
+            }
+
+            nav.custom-menu ul {
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+            }
+
+            nav.custom-menu li {
+                color: #000;
+                display: block;
+                float: left;
+                padding: 1rem;
+                position: relative;
+                text-decoration: none;
+                transition-duration: 0.5s;
+                box-sizing: border-box;
+            }
+
+            nav.custom-menu li a {
+                color: #000;
+            }
+
+            nav.custom-menu li:hover>a {
+                text-decoration: underline;
+            }
+
+            nav.custom-menu li:hover,
+            nav.custom-menu li:focus-within {
+                cursor: pointer;
+            }
+
+            nav.custom-menu li:focus-within a {
+                outline: none;
+            }
+
+            nav.custom-menu ul li ul {
+                background: black;
+                visibility: hidden;
+                opacity: 0;
+                min-width: 140px;
+                width: auto;
+                position: absolute;
+                transition: all 0.5s ease;
+                margin-top: 1rem;
+                left: calc(50% - 70px);
+                display: none;
+            }
+
+            nav.custom-menu ul li ul:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-width: 0 0 10px;
+                border-style: solid;
+                border-right: solid 10px transparent;
+                border-left: solid 10px transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                margin-left: -10px;
+            }
+
+            nav.custom-menu ul li ul li a {
+                color: white;
+            }
+
+            nav.custom-menu ul li:hover>ul,
+            nav.custom-menu ul li:focus-within>ul,
+            nav.custom-menu ul li ul:hover,
+            nav.custom-menu ul li ul:focus {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                z-index: 9999;
+            }
+
+            nav.custom-menu ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+
+        }
+    </style>
+
+
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="font"
+        onload="this.onload=null;this.rel='stylesheet'" />
+
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" />
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="home-template is-head-left-logo has-classic-feed">
+    <div class="gh-site">
+
+        <header id="gh-head" class="gh-head gh-outer">
+            <div class="gh-head-inner gh-inner">
+                <div class="gh-head-brand">
+                    <div class="gh-head-brand-wrapper">
+                        <a class="gh-head-logo" href="https://diegobm23.com.br">
+                            Diego Moreira
+                        </a>
+                        <span class="site-tagline">Perfil, portifólio e outros</span>
+                    </div>
+                </div>
+
+                <div class="gh-head-actions">
+                    <ul class="contact-social-links">
+                        <li class="link-github"><a href="https://github.com/diegobm23" target="_blank">GitHub</a>
+                        </li>
+                        <li class="link-instagram"><a
+                                href="https://www.instagram.com/diego.moreira23/" target="_blank">Instagram</a></li>
+                        <li class="link-linkedin"><a
+                                href="https://www.linkedin.com/in/diegobm23/" target="_blank">LinkedIn</a></li>
+                        <li class="link-youtube"><a
+                                href="https://www.youtube.com/@diegobm23" target="_blank">Youtube</a></li>
+                        <li class="link-mail"><a
+                                href="mailto:diegobm23@gmail.com" target="_blank">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main class="gh-main gh-outer">
+            <div class="gh-inner">
+                <article class="gh-article post gh-home-page">
+                    <header class="gh-article-header gh-canvas">
+                        <figure class="gh-article-image">
+                            <img srcset="/content/images/size/w300/2024/08/NEWWWW.jpg 300w,
+                    /content/images/size/w720/2024/08/NEWWWW.jpg 720w,
+                    /content/images/size/w960/2024/08/NEWWWW.jpg 960w,
+                    /content/images/size/w1200/2024/08/NEWWWW.jpg 1200w,
+                    /content/images/size/w2000/2024/08/NEWWWW.jpg 2000w,
+                    /content/images/2024/08/NEWWWW.jpg" sizes="(max-width: 1200px) 100vw, 1200px"
+                                src="/content/images/size/w1200/2024/08/NEWWWW.jpg" alt="Home">
+                        </figure>
+                    </header>
+
+                    <section class="gh-content gh-canvas">
+                        <h3 id="about">About</h3>
+                        <p>Hi, I'm David.</p>
+                        <p>I'm a technology journalist living in Brooklyn, New York. I’m a writer, researcher and
+                            producer for the <a href="https://youtube.com/MKBHD?ref=davidimel.com">MKBHD YouTube
+                                channel</a> and co-host the <a
+                                href="https://podcasts.apple.com/us/podcast/id1474429475?at=1010lSCj&ref=davidimel.com">Waveform
+                                podcast</a>. You can find my videos on <a
+                                href="https://www.youtube.com/thestudio?ref=davidimel.com">The Studio</a> YouTube
+                            Channel and <a href="https://www.youtube.com/davidimel?ref=davidimel.com">my personal</a>
+                            YouTube Channel. </p>
+                        <p><strong>Toss me a line 🎣</strong></p>
+                        <p><a><em>hello@davidimel.com</em></a></p>
+                    </section>
+                </article>
+            </div>
+        </main>
+
+
+
+
+        <footer class="gh-foot gh-outer">
+            <div class="gh-foot-inner gh-inner">
+                <nav class="gh-foot-menu">
+                    <ul class="nav">
+                        <li class="nav-sign-up nav-current">by diegobm23 &copy; 2025</li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
