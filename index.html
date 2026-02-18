@@ -16,113 +16,199 @@
     <meta name="keywords"
         content="diego moreira, diegobm23, diego, moreira, backend developer, backend, developer, java, mongodb">
     <link rel="icon" type="image/x-icon" href="./img/terminal-solid.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <button id="dark-mode-toggle">Dark Mode</button>
-    <article class="markdown-body">
-        <img src="./img/avatar.jpeg" alt="Avatar" class="avatar">
-        <h1 class="atx" id="diego-moreira">
-            <img src="./img/terminal-solid.svg" style="width: 3%"> Diego Moreira
-        </h1>
-        <div class="social-links">
-            <a href="https://github.com/diegobm23" style="text-decoration: none" target="_blank" aria-label="GitHub">
-                <img src="./img/github.png" class="socials button" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/diegobm23/" style="text-decoration: none" target="_blank"
-                aria-label="LinkedIn">
-                <img src="./img/linkedin.svg" class="socials button" alt="LinkedIn">
-            </a>
-            <a href="https://www.instagram.com/diego.moreira23/" style="text-decoration: none" target="_blank"
-                aria-label="Instagram">
-                <img src="./img/instagram.svg" class="socials button" alt="Instagram">
-            </a>
-            <a href="https://www.youtube.com/@diegobm23" style="text-decoration: none" target="_blank"
-                aria-label="Youtube">
-                <img src="./img/youtube.png" class="socials button" alt="Youtube">
-            </a>
-            <a href="mailto:diegobm23@gmail.com" style="text-decoration: none" target="_blank" aria-label="Gmail">
-                <img src="./img/gmail.svg" class="socials button" alt="Gmail">
-            </a>
-        </div>
+    <div class="theme-toggle-container">
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+            <span class="icon">🌙</span>
+        </button>
+    </div>
 
-        <h2 class="atx" id="bio">Sobre mim</h2>
-        <p>
-            Profissional na área de desenvolvimento de software com 15 anos de experiência no mercado. Priorizo
-            responsabilidade
-            nas entregas e comunicação direta com as equipes envolvidas. Conhecimento técnico, conhecimento do negócio e
-            comunicação são os pilares da minha atuação profissional. Experiências com desenvolvimento e liderança
-            técnica.
-        </p>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <img src="./img/avatar.jpeg" alt="Diego Moreira" class="avatar">
+                <h1 class="hero-name">
+                    <span class="icon">💻</span> Diego Moreira
+                </h1>
+                <p class="hero-title">Software Engineer & Tech Lead</p>
 
-        <h2 class="atx" id="localizacao">Localização</h2>
-        <ul>
-            <li>
-                <p>Curitiba - PR, Brasil</p>
-            </li>
-        </ul>
+                <div class="social-links">
+                    <a href="https://github.com/diegobm23" target="_blank" aria-label="GitHub" class="social-btn">
+                        <img src="./img/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/diegobm23/" target="_blank" aria-label="LinkedIn"
+                        class="social-btn">
+                        <img src="./img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/diego.moreira23/" target="_blank" aria-label="Instagram"
+                        class="social-btn">
+                        <img src="./img/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@diegobm23" target="_blank" aria-label="Youtube"
+                        class="social-btn">
+                        <img src="./img/youtube.png" alt="Youtube">
+                    </a>
+                    <a href="mailto:diegobm23@gmail.com" target="_blank" aria-label="Gmail" class="social-btn">
+                        <img src="./img/gmail.svg" alt="Gmail">
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <h2 class="atx" id="formacao">Formação</h2>
-        <ul>
-            <li>
-                <p>Graduação: Análise e Desenvolvimento de Sistemas - UTFPR (2007 - 2013)</p>
-            </li>
-            <li>
-                <p>Pós-graduação: Cybersecurity - PUC-PR (2022 - 2024)</p>
-            </li>
-        </ul>
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="card">
+                <p>
+                    Profissional na área de desenvolvimento de software com 15 anos de experiência no mercado. Priorizo
+                    responsabilidade nas entregas e comunicação direta com as equipes envolvidas.
+                    Conhecimento técnico, visão de negócio e comunicação são os pilares da minha atuação profissional.
+                    Experiência sólida em desenvolvimento e liderança técnica.
+                </p>
+            </div>
+        </section>
 
-        <h2 class="atx" id="trabalho">Trabalho</h2>
-        <ul>
-            <li>
-                <p>Engenheiro de software especialista II (Spec II ou Staff) na <a href="https://asaplog.com.br/"
-                        target="_blank">CBFull (Grupo Casas Bahia)</a></p>
-            </li>
-            <li>
-                <p>Trabalhando de maneira híbrida (escritório e casa)</p>
-            </li>
-        </ul>
+        <!-- Location Section -->
+        <section class="section location-section" id="location">
+            <h2 class="section-title">Localização</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="icon">📍</span>
+                    <p>Curitiba - PR, Brasil</p>
+                </div>
+            </div>
+        </section>
 
-        <h2 class="atx" id="atuacao">Atuação</h2>
-        <p>Desenvolvimento backend e API's, desenho de arquiteturas de software, pesquisa e desenvolvimento para
-            evolução de sistemas, code review, liderança técnica de squads, gerenciamento de deploys, refinamento
-            técnico de user story, otimizações de código, solução de problemas lógicos, soluções realistas e práticas.
-            Atuando com sistemas de logística, roteirização, rastreamento e otimizações de entregas.
-        </p>
+        <!-- Education Section -->
+        <section class="section education-section" id="education">
+            <h2 class="section-title">Formação</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2007 - 2013</div>
+                    <div class="timeline-content">
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>UTFPR - Universidade Tecnológica Federal do Paraná</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Pós-graduação em Cybersecurity</h3>
+                        <p>PUC-PR - Pontifícia Universidade Católica do Paraná</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2 class="atx" id="conhecimento">Conhecimentos</h2>
-        <ul>
-            <li><b>Linguagens</b></li>
-            <ul>
-                <li>Java 8/11/17/21, Javascript, Python, Groovy, C#, C</li>
-            </ul>
-            <li><b>Frameworks</b></li>
-            <ul>
-                <li>Spring, Spring Boot, NodeJS, Grails, JSP, JSF, Delphi</li>
-            </ul>
-            <li><b>Banco de dados</b></li>
-            <ul>
-                <li>MongoDB, Redis, PostgreSQL, SQL Server</li>
-            </ul>
-            <li><b>Outros</b></li>
-            <ul>
-                <li>SQL, RabbitMQ, Linux, Git, Docker, Kubernets, Cloud AWS, metodologias ágeis, entrega contínua</li>
-            </ul>
-        </ul>
+        <!-- Work Section -->
+        <section class="section work-section" id="work">
+            <h2 class="section-title">Trabalho Atual</h2>
+            <div class="card work-card">
+                <h3>Engenheiro de Software Especialista II (Principal Engineer)</h3>
+                <a href="https://asaplog.com.br/" target="_blank" class="highlight-link">CBFull (Grupo Casas Bahia)</a>
+                <p class="work-mode">Modelo Híbrido (Escritório / Home Office)</p>
+            </div>
+        </section>
 
-        <h2 class="atx" id="inspiracoes">Inspirações</h2>
-        <p>Michael Jordan, Lewis Hamilton, Isaac Asimov, Linus Torvalds, Jordan Petterson, Neil deGrasse Tyson, Arthur
-            C. Clarke</p>
+        <!-- Expertise Section -->
+        <section class="section expertise-section" id="actuation">
+            <h2 class="section-title">Atuação</h2>
+            <div class="card">
+                <p>
+                    Desenvolvimento backend e API's, desenho de arquiteturas de software, pesquisa e desenvolvimento
+                    para evolução de sistemas,
+                    code review, liderança técnica de squads, gerenciamento de deploys, refinamento técnico de user
+                    story, otimizações de código,
+                    solução de problemas lógicos, soluções realistas e práticas.
+                    Atuando com sistemas de logística, roteirização, rastreamento e otimizações de entregas.
+                </p>
+            </div>
+        </section>
 
-        <footer class="copyright" style="display: flex; justify-content: flex-start; align-items: center;">
-            <span>by diegobm23 &copy; 2026</span>
-            <a href="https://drive.google.com/file/d/1jmvh6oozchDaYUpk34GxkuycxAyPlDVK/view?usp=sharing" target="_blank"
-                download style="margin-left: 20px;">
-                📄Currículo em PDF
-            </a>
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <h2 class="section-title">Conhecimentos</h2>
+
+            <div class="skills-category">
+                <h3>Linguagens</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Java 8/11/17/21</span>
+                    <span class="skill-tag">Javascript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Groovy</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">C</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Frameworks</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">NodeJS</span>
+                    <span class="skill-tag">Grails</span>
+                    <span class="skill-tag">JSP/JSF</span>
+                    <span class="skill-tag">Delphi</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Banco de Dados</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">SQL Server</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Outros</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Scrum/Agile</span>
+                    <span class="skill-tag">CI/CD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inspiration Section -->
+        <section class="section inspiration-section" id="inspiration">
+            <h2 class="section-title">Inspirações</h2>
+            <div class="tags-cloud">
+                <span class="tag">Michael Jordan</span>
+                <span class="tag">Lewis Hamilton</span>
+                <span class="tag">Isaac Asimov</span>
+                <span class="tag">Linus Torvalds</span>
+                <span class="tag">Jordan Peterson</span>
+                <span class="tag">Neil deGrasse Tyson</span>
+                <span class="tag">Arthur C. Clarke</span>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <span>&copy; 2026 diegobm23</span>
+                <a href="https://drive.google.com/file/d/1jmvh6oozchDaYUpk34GxkuycxAyPlDVK/view?usp=sharing"
+                    target="_blank" class="resume-link">
+                    📄 Baixar Currículo PDF
+                </a>
+            </div>
         </footer>
-    </article>
+    </main>
 </body>
 
 <script>
