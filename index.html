@@ -35,7 +35,7 @@
 <body>
     <div class="theme-toggle-container">
         <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-            <span class="icon">🌙</span>
+            <span class="icon">🌚</span>
         </button>
     </div>
 
@@ -240,8 +240,16 @@
 </body>
 
 <script>
-    document.getElementById('dark-mode-toggle').addEventListener('click', function () {
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const iconSpan = toggleBtn.querySelector('.icon');
+
+    toggleBtn.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            iconSpan.textContent = '🌞';
+        } else {
+            iconSpan.textContent = '🌚';
+        }
     });
 </script>
 
